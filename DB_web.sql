@@ -12,13 +12,22 @@ create table Customer
 	Phone varchar(11)
 )
 go
+create table Position
+(
+	PosID int identity primary key,
+	PName Nvarchar(10),
+	
+)
+go
 create table Account
 (
 	Username varchar(30) primary key,
 	Password varchar(30),
+	Position int references Position(PosID),
 	CusID int references Customer(CusID)
 )
 go
+
 create table Category
 (
 	CateID int identity primary key,
@@ -50,6 +59,7 @@ create table Bill
 	BDate date,
 	BTotal float,
 	BCart bit,
+	note nvarchar(500),
 	CusID int references Customer(CusID)
 )
 go
@@ -59,6 +69,7 @@ create table Detail
 	DAmount int ,
 	DFName nvarchar(30),
 	DfPrice float,
+	DFimg nvarchar(200),
 	DFoodID int references Food(FoodID),
 	DOderID int references Bill(BillID)
 )
