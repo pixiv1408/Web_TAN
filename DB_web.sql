@@ -38,17 +38,17 @@ create table Food
 (
 	FoodID int identity primary key,
 	FName nvarchar(30),
-	Fimage nvarchar(50),
+	Fimage nvarchar(255),
 	FDescribe nvarchar(200),
 	FStatus bit,
-	FPrice float,
+	FPrice int,
 	CID int references Category(CateID)
 )
 go
 create table Promotional
 (
 	ID int identity primary key,
-	Promoprice float,
+	Promoprice int ,
 	Expirationdate date,
 	FoodID int references Food(FoodID)
 )
@@ -57,7 +57,7 @@ create table Bill
 (
 	BillID int identity primary key,
 	BDate date,
-	BTotal float,
+	BTotal int,
 	BCart bit,
 	note nvarchar(500),
 	CusID int references Customer(CusID)
@@ -68,8 +68,8 @@ create table Detail
 	DetailID int identity primary key,
 	DAmount int ,
 	DFName nvarchar(30),
-	DfPrice float,
-	DFimg nvarchar(200),
+	DfPrice int,
+	DFimg nvarchar(255),
 	DFoodID int references Food(FoodID),
 	DOderID int references Bill(BillID)
 )
