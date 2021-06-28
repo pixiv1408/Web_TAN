@@ -1,0 +1,63 @@
+﻿@model IEnumerable<testing.Models.Food>
+
+@{
+    ViewBag.Title = "FoodByCate";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+@Html.Partial("_breadcrumb")
+
+
+<div class="container">
+    <div class="row">
+
+        <!--category -->
+        <div class="col-sm-3">
+
+            @Html.Action("CategoriesFood", "FoodHome")
+
+            <!--món mới nhất -->
+            @Html.Action("NewestFood", "FoodHome")
+            <!--món mới nhất -->
+        </div>
+        <!--category -->
+        <!--Món -->
+        <div class="col-sm-9">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="@item.Fimage" width="150" height="200" alt="Card image cap">
+                            <div class="card-body">
+                                <!--Món detail -->
+                                <h4 class="card-title show_txt">
+                                    <a href="@Url.Action("Details","FoodHome",new { id = item.FoodID })" title="View Product">@item.FName</a>
+                                </h4>
+                                <!--Món detail -->
+                                <p class="card-text show_txt">
+                                    @item.FDescribe
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+
+                                        <p class="btn btn-danger btn-block"><b>@string.Format("{0:0,0}", item.FPrice) VNĐ</b></p>
+
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="btn btn-success btn-block">Đặt món</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <!--Món -->
+
+    </div>
+</div>
+

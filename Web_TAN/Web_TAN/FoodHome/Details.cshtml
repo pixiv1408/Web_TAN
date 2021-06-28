@@ -1,0 +1,91 @@
+﻿@model testing.Models.Food
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@Html.Partial("_breadcrumb")
+
+<div class="container">
+    <div class="row">
+
+        <!--category -->
+        <div class="col-sm-3">
+
+            @Html.Action("CategoriesFood", "FoodHome")
+
+            <!--món mới nhất -->
+            @Html.Action("NewestFood", "FoodHome")
+            <!--món mới nhất -->
+        </div>
+        <!--category -->
+
+        <!--Detail -->
+        <div class="col-sm-9">
+            <div class="container">
+                <div class="card">
+                    <div class="row">
+
+                        <aside class="col-sm-5 border-right">
+                            <article class="gallery-wrap">
+                                <div class="img-big-wrap" >
+                                    <img src="@Model.Fimage">
+                                </div> <!-- slider-product.// -->                             
+                            </article> <!-- gallery-wrap .end// -->
+                        </aside>
+
+                        <aside class="col-sm-7">
+                            <article class="card-body p-5">
+                                <h3 class="title mb-3">@Model.FName</h3>
+
+                                <p class="price-detail-wrap">
+                                    <span class="price h3 text-warning">
+                                        <span class="num"><b>@string.Format("{0:0,0}",Model.FPrice)</b></span> <span class="currency">VNĐ</span>
+                                    </span>
+                                </p> <!-- price-detail-wrap .// -->
+                                <dl class="item-property">
+                                    <dt>Chi tiết món</dt>
+                                    <dd>
+                                        <p>
+                                           @Model.FDescribe
+
+                                        </p>
+                                    </dd>
+                                </dl>
+
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-5">
+
+                                        <dl class="param param-inline">
+                                            <dt>Số lượng: </dt>
+                                            <dd>
+                                                <select class="form-control form-control-sm" style="width:70px;">
+                                                    <option> 1 </option>
+                                                    <option> 2 </option>
+                                                    <option> 3 </option>
+                                                    <option> 4 </option>
+                                                    <option> 5 </option>
+                                                </select>
+                                            </dd>
+                                        </dl>  <!-- item-property .// -->
+
+                                    </div> <!-- col.// -->
+
+                                </div> <!-- row.// -->
+                                <hr>
+
+                                <a href="#" class="btn btn-lg btn-primary text-uppercase">Mua ngay</a>
+                                <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i>Thêm vào giỏ </a>
+
+                            </article> <!-- card-body.// -->
+                        </aside> <!-- col.// -->
+                    </div> <!-- row.// -->
+                </div> <!-- card.// -->
+            </div>
+        </div>
+        <!--Detail-->
+    </div>
+</div>
+
+
