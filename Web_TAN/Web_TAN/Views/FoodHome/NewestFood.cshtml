@@ -1,0 +1,14 @@
+﻿@model IEnumerable<testing.Models.Food>
+
+<div class="card bg-light mb-3">
+    <div class="card-header bg-success text-white text-uppercase">Món mới nhất</div>
+    <div class="card-body">
+        @foreach (var item in Model)
+        {
+            <img class="img-fluid" src="@item.Fimage" />
+            <h5 class="card-title" style="text-align:center">@item.FName</h5>
+            <p class="card-text" style="text-align:center">@item.FDescribe</p>
+            <p class="bloc_left_price">@string.Format("{0:0,0}", item.FPrice) VNĐ</p>
+        }
+    </div>
+</div>
