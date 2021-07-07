@@ -1,0 +1,86 @@
+﻿@model testing.Models.Account
+
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style>
+    .login-form {
+        width: 400px;
+        margin: 50px auto;
+        font-size: 15px;
+    }
+
+        .login-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        .login-form h2 {
+            margin: 0 0 15px;
+        }
+</style>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+
+                <!--category -->
+                @Html.Action("CategoriesFood", "FoodHome")
+                <!--category -->
+                <!--món mới nhất -->
+                @Html.Action("NewestFood", "FoodHome")
+                <!--món mới nhất -->
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row">
+
+                    <form action="#" style="border:1px solid #000000">
+                        <div class="container ">
+                            <h4 style="text-align:center"><b>Đăng nhập</b></h4>
+                            <hr>
+
+                            <div class="login-form ">
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputuser" name="inputuser" placeholder="Tên đăng nhập" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="inputpass" name="inputpass" placeholder="Mật khẩu" required="required">
+                                </div>
+                                @if (ViewBag.Error != null)
+                                {                                  
+                                    <div style="text-align:center">
+                                        <b class="badge badge-danger" >@ViewBag.Error</b>
+                                    </div>
+                                }
+                                <hr />
+                                <div class="clearfix form-group">
+                                    <label class="float-left form-check-label"><input type="checkbox"> Ghi nhớ tài khoản</label>
+                                    <a href="#" class="float-right">Quên mật khẩu?</a>
+                                </div>
+                                <hr />
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-danger">Đăng nhập</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

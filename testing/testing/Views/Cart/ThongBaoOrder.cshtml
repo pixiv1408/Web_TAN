@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ThongBaoOrder";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+@Html.Partial("_breadcrumb")
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+
+            <!--category -->
+            @Html.Action("CategoriesFood", "FoodHome")
+            <!--category -->
+            <!--món mới nhất -->
+            @Html.Action("NewestFood", "FoodHome")
+            <!--món mới nhất -->
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="container">
+                    <h3 style="text-align:center"><b>Thanh toán mua hàng thành công</b></h3>
+                    <h3 style="text-align:center"><b>Cảm ơn bạn đã mua hàng của chúng tôi</b></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

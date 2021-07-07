@@ -1,0 +1,168 @@
+D:\testing\testing\bin\testing.dll.config
+D:\testing\testing\bin\testing.dll
+D:\testing\testing\bin\testing.pdb
+D:\testing\testing\bin\roslyn\csc.exe
+D:\testing\testing\bin\roslyn\csc.exe.config
+D:\testing\testing\bin\roslyn\csc.rsp
+D:\testing\testing\bin\roslyn\csi.exe
+D:\testing\testing\bin\roslyn\csi.exe.config
+D:\testing\testing\bin\roslyn\csi.rsp
+D:\testing\testing\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\testing\testing\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\testing\testing\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\testing\testing\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\testing\testing\bin\roslyn\Microsoft.Managed.Core.targets
+D:\testing\testing\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\testing\testing\bin\roslyn\System.AppContext.dll
+D:\testing\testing\bin\roslyn\System.Collections.Immutable.dll
+D:\testing\testing\bin\roslyn\System.Console.dll
+D:\testing\testing\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\testing\testing\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\testing\testing\bin\roslyn\System.IO.Compression.dll
+D:\testing\testing\bin\roslyn\System.IO.FileSystem.dll
+D:\testing\testing\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\testing\testing\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\testing\testing\bin\roslyn\System.IO.Pipes.dll
+D:\testing\testing\bin\roslyn\System.Reflection.Metadata.dll
+D:\testing\testing\bin\roslyn\System.Security.AccessControl.dll
+D:\testing\testing\bin\roslyn\System.Security.Claims.dll
+D:\testing\testing\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\testing\testing\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\testing\testing\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\testing\testing\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\testing\testing\bin\roslyn\System.Security.Principal.Windows.dll
+D:\testing\testing\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\testing\testing\bin\roslyn\System.ValueTuple.dll
+D:\testing\testing\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\testing\testing\bin\roslyn\System.Xml.XmlDocument.dll
+D:\testing\testing\bin\roslyn\System.Xml.XPath.dll
+D:\testing\testing\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\testing\testing\bin\roslyn\vbc.exe
+D:\testing\testing\bin\roslyn\vbc.exe.config
+D:\testing\testing\bin\roslyn\vbc.rsp
+D:\testing\testing\bin\roslyn\VBCSCompiler.exe
+D:\testing\testing\bin\roslyn\VBCSCompiler.exe.config
+D:\testing\testing\bin\Antlr3.Runtime.dll
+D:\testing\testing\bin\EntityFramework.dll
+D:\testing\testing\bin\EntityFramework.SqlServer.dll
+D:\testing\testing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\testing\testing\bin\Microsoft.Web.Infrastructure.dll
+D:\testing\testing\bin\Newtonsoft.Json.dll
+D:\testing\testing\bin\System.Web.Helpers.dll
+D:\testing\testing\bin\System.Web.Mvc.dll
+D:\testing\testing\bin\System.Web.Optimization.dll
+D:\testing\testing\bin\System.Web.Razor.dll
+D:\testing\testing\bin\System.Web.WebPages.Deployment.dll
+D:\testing\testing\bin\System.Web.WebPages.dll
+D:\testing\testing\bin\System.Web.WebPages.Razor.dll
+D:\testing\testing\bin\WebGrease.dll
+D:\testing\testing\bin\EntityFramework.xml
+D:\testing\testing\bin\EntityFramework.SqlServer.xml
+D:\testing\testing\bin\System.Web.Helpers.xml
+D:\testing\testing\bin\System.Web.Mvc.xml
+D:\testing\testing\bin\System.Web.Optimization.xml
+D:\testing\testing\bin\System.Web.Razor.xml
+D:\testing\testing\bin\System.Web.WebPages.xml
+D:\testing\testing\bin\System.Web.WebPages.Deployment.xml
+D:\testing\testing\bin\System.Web.WebPages.Razor.xml
+D:\testing\testing\bin\Newtonsoft.Json.xml
+D:\testing\testing\bin\Antlr3.Runtime.pdb
+D:\testing\testing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\testing\testing\obj\Debug\testing.csproj.CoreCompileInputs.cache
+D:\testing\testing\obj\Debug\testing.csproj.CopyComplete
+D:\testing\testing\obj\Debug\testing.dll
+D:\testing\testing\obj\Debug\testing.pdb
+D:\testing\testing\bin\PagedList.dll
+D:\testing\testing\bin\PagedList.Mvc.dll
+D:\testing\testing\bin\PagedList.xml
+D:\testing\testing\bin\PagedList.Mvc.xml
+D:\testing\testing\obj\Debug\testing.csprojAssemblyReference.cache
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\testing.dll.config
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\testing.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\testing.pdb
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\csc.exe
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\csc.exe.config
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\csc.rsp
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\csi.exe
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\csi.exe.config
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\csi.rsp
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.Managed.Core.targets
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.AppContext.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Collections.Immutable.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Console.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.IO.Compression.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.IO.FileSystem.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.IO.Pipes.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Reflection.Metadata.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Security.AccessControl.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Security.Claims.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Security.Principal.Windows.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.ValueTuple.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Xml.XmlDocument.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Xml.XPath.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\vbc.exe
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\vbc.exe.config
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\vbc.rsp
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\VBCSCompiler.exe
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\roslyn\VBCSCompiler.exe.config
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\Antlr3.Runtime.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\EntityFramework.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\EntityFramework.SqlServer.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\Microsoft.Web.Infrastructure.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\Newtonsoft.Json.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\PagedList.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\PagedList.Mvc.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Helpers.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Mvc.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Optimization.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Razor.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.WebPages.Deployment.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.WebPages.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.WebPages.Razor.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\WebGrease.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\EntityFramework.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\EntityFramework.SqlServer.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\PagedList.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\PagedList.Mvc.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Helpers.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Mvc.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Optimization.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.Razor.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.WebPages.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.WebPages.Deployment.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\System.Web.WebPages.Razor.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\Newtonsoft.Json.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\Antlr3.Runtime.pdb
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\obj\Debug\testing.csprojAssemblyReference.cache
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\obj\Debug\testing.csproj.CoreCompileInputs.cache
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\obj\Debug\testing.csproj.CopyComplete
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\obj\Debug\testing.dll
+E:\A tài liệu học tập\Đồ án web C#\testing\testing\obj\Debug\testing.pdb
