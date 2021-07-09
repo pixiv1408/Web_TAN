@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using testing.Models;
+
 namespace testing.Controllers
 {
     public class FoodHomeController : Controller
@@ -17,13 +18,12 @@ namespace testing.Controllers
         public ActionResult CategoriesFood()
         {
             var listCategories = db.Categories.ToList();
-            return PartialView(listCategories);
+            return PartialView(listCategories.Where(x=>x.CStatus==true));
         }
         // lấy món mới nhất
         public ActionResult NewestFood()
         {
-            var newFood = db.Foods.OrderByDescending(p => p.FoodID).Take(1);
-
+            var newFood = db.Foods.OrderByDescending(p => p.FoodID).Take(1).Where(a=>a.FStatus==true);        
             return PartialView(newFood);
         }
         //lấy món theo loại
@@ -42,5 +42,17 @@ namespace testing.Controllers
             return View(foodDetail.SingleOrDefault());
         }
 
+        //tìm kiếm món ăn
+        public ActionResult SearchFood(string searchStr)
+        {        
+            var search = from fo in db.Foods where fo.FStatus==true  select fo;
+            if (!string.IsNullOrEmpty(searchStr))
+            {
+                search = search.Where(s => s.FName.Contains(searchStr.ToLower()));
+            }
+            return View(search);
+        }
+
+     
     }
 }

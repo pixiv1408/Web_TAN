@@ -139,7 +139,6 @@ namespace testing.Controllers
             List<GioHang> lstGH = listGioHang();
             ViewBag.TongSL = TongSL();
             ViewBag.TotalPrice = TotalPrice();
-
             return View(lstGH);
         }
         [HttpPost]
@@ -173,6 +172,7 @@ namespace testing.Controllers
             return RedirectToAction("ThongBaoOrder", "Cart");
         }
 
+        // thông báo mua hàng thành công
         public ActionResult ThongBaoOrder()
         {
             return View();

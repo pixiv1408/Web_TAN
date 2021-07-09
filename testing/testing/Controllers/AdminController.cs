@@ -19,13 +19,39 @@ namespace testing.Controllers
         // GET: Admin
         public ActionResult IndexAD()
         {
-            if(Session["LogIn"] == null || Session["LogIn"].ToString() == "" && Session["Role"].ToString() !="1")
+            if(Session["LoginAD"] == null)
             {
-                return RedirectToAction("Index", "FoodHome");
+                return RedirectToAction("Login", "Admin");
+            }
+            return View();
+        }
+        //Login AdMin
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(FormCollection form)
+        {
+            var usern = form["username"];
+            var pass = form["password"];
+            if (ModelState.IsValid)
+            {
+                Admin ad = db.Admins.SingleOrDefault(x => x.UserAdmin == usern && x.PassAdmin == pass);
+                if (ad != null)
+                {
+                    Session["LoginAD"] = ad;
+                    return RedirectToAction("IndexAD", "Admin");
+                }
+                else
+                    ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không chính xác";
             }
             return View();
         }
 
+
+        // show list món ăn
         public ActionResult MonAn(int ?page)
         {
             int pageNum = (page ?? 1);
@@ -35,8 +61,59 @@ namespace testing.Controllers
 
             return View(db.Foods.ToList().Where(a=>a.FStatus==true).OrderBy(x=>x.FoodID).ToPagedList(pageNum,pageSize));
         }
-
+        // show list loại món
+        public ActionResult LoaiMon()
+        {
+            return View(db.Categories.ToList().Where(a=>a.CStatus==true).OrderBy(x => x.CateID));
+        }
+        
+        // thêm loại món
         [HttpGet]
+        public ActionResult ThemLoaiMon()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ThemLoaiMon(FormCollection form)
+        {
+            Category ct = new Category();
+            var tenmon = form["cateName"];
+            if (ModelState.IsValid)
+            {
+                var check = db.Categories.SingleOrDefault(a => a.CName == ct.CName);
+                if (check == null)
+                {
+                    ct.CName = tenmon;
+                    ct.CStatus = true;
+                    db.Categories.Add(ct);
+                    db.SaveChanges();
+                    return RedirectToAction("LoaiMon", "Admin");
+                }
+                else
+                {
+                    ViewBag.Error = "Loại món đã tồn tại";
+                    return View();
+                }
+            }
+            return View();
+        }
+        // xóa loại món
+        [HttpPost]
+        public ActionResult DeleteCate(int id)
+        {
+            Category cate = db.Categories.SingleOrDefault(a => a.CateID == id);
+            if(cate == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            cate.CStatus = false;
+            db.Entry(cate).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();             
+            return RedirectToAction("LoaiMon");
+        }
+
+        //Thêm món
         public ActionResult CreateNew()
         {
             Food mon = new Food();
@@ -117,7 +194,7 @@ namespace testing.Controllers
             return RedirectToAction("MonAn");
         }
 
-        // edit
+        // edit món
         [HttpGet]
         public ActionResult EditFood(int id)
         {

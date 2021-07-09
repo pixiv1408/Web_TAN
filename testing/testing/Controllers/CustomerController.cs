@@ -19,7 +19,7 @@ namespace testing.Controllers
            
             return View();
         }
-
+        // Đăng ký tài khoản
         [HttpGet]
         public ActionResult SignUP()
         {
@@ -66,6 +66,8 @@ namespace testing.Controllers
                 return View();
             }         
         }
+
+        // Đăng nhập khách
         [HttpGet]
         public ActionResult DangNhap()
         {
@@ -83,10 +85,8 @@ namespace testing.Controllers
                 Account acc = db.Accounts.SingleOrDefault(a => a.Username == username && a.Password == password);
                 if(acc != null)
                 {
-                    Session["LogIn"] = acc;
-                    Session["Role"] = acc.Position.ToString();
+                    Session["LogIn"] = acc;                
                     Session["FullName"] = acc.Customer.Fullname.ToString();
-                    Session["UserId"] = db.Accounts.Where(u => u.Username == username).Single().CusID;
                     return RedirectToAction("Index", "FoodHome");
                 }
                 else
@@ -96,11 +96,10 @@ namespace testing.Controllers
             }
             return View();
         }
-
+        // thay đổi mật khẩu
         [HttpGet]
         public ActionResult ChangesPassword()
         {
-
             return View();
         }
         [HttpPost]
@@ -108,30 +107,31 @@ namespace testing.Controllers
         {
             Account acc = (Account)Session["LogIn"];
             acc = db.Accounts.SingleOrDefault(a => a.CusID == acc.CusID);
-            if (acc.Password == obj.oldPassword)
+
+            if (ModelState.IsValid)
             {
-                acc.Password = obj.newPassword;
-                db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
-                ViewBag.Message=("Cập nhật thành công");
-                Session.Clear();
-                return RedirectToAction("DangNhap", "Customer");
-
-
-            }
-            else
-            {
-                ViewBag.Message = ("Sai mật khẩu hiện tại");
-
+                if (acc.Password == obj.oldPassword)
+                {
+                    acc.Password = obj.newPassword2;
+                    db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    Session.Clear();
+                    return RedirectToAction("DangNhap", "Customer");
+                }
+                else
+                {
+                    ViewBag.Message = ("Thông tin không chính xác");
+                }
             }
             return View();
         }
 
-        //log out
+        // đăng xuất
         public ActionResult logOut()
         {
             Session.Clear();
             return RedirectToAction("Index", "FoodHome");
         }
+        
     }
 }
