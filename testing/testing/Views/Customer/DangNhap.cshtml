@@ -1,7 +1,7 @@
 ﻿@model testing.Models.Account
 
 @{
-    ViewBag.Title = "DangNhap";
+    ViewBag.Title = "Đăng nhập";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
@@ -24,7 +24,19 @@
         }
 </style>
 
-
+<div class="container">
+<div class="row">
+    <div class="col">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
+                <li class="breadcrumb-item">Đăng nhập</li>
+             
+            </ol>
+        </nav>
+    </div>
+</div>
+</div>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -59,9 +71,9 @@
                                     <input type="password" class="form-control" id="inputpass" name="inputpass" placeholder="Mật khẩu" required="required">
                                 </div>
                                 @if (ViewBag.Error != null)
-                                {                                  
+                                {
                                     <div style="text-align:center">
-                                        <b class="badge badge-danger" >@ViewBag.Error</b>
+                                        <b class="badge badge-danger">@ViewBag.Error</b>
                                     </div>
                                 }
                                 <hr />
@@ -70,8 +82,8 @@
                                     <a href="#" class="float-right">Quên mật khẩu?</a>
                                 </div>
                                 <hr />
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-danger">Đăng nhập</button>
+                                <div class="form-group" >
+                                    <button type="submit" class="btn btn-primary btn-block btn-danger" >Đăng nhập</button>
                                 </div>
 
                             </div>

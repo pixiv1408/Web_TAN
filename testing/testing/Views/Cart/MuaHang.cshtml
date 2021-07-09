@@ -4,11 +4,10 @@
 
 
 @{
-    ViewBag.Title = "MuaHang";
+    ViewBag.Title = "Thanh toán";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-<h2>MuaHang</h2>
 @Html.ActionLink("Trở về giỏ hàng", "GioHang", "Cart")
 <div class="shopping-cart">
     <div class="px-4 px-lg-0">
@@ -104,9 +103,8 @@
                                     <label class="form-control border-0"><b>@DateTime.Now.ToShortDateString()</b></label>
                                 </div>
                                 <div class="input-group mb-4 border rounded-pill p-2" style="align-items:center">
-                                    <label class="form-control border-0 ">Ghi chú:</label>
-                                    @*<label class="form-control border-0"><b>@DateTime.Now.ToShortDateString()</b></label>*@
-                                    <textarea name="textNote" id="textNote" rows="5" cols="50">
+                                    <label class="form-control border-0">Note:</label>            
+                                    <textarea name="textNote" id="textNote" rows="5" cols="50" class="border-0 input-group">
                                     </textarea>
                                 </div>
                             </div>
