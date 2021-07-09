@@ -21,6 +21,8 @@ namespace testing.Models
         [StringLength(15)]
         public string CName { get; set; }
 
+        public bool? CStatus { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Food> Foods { get; set; }
     }

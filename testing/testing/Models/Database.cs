@@ -12,7 +12,9 @@ namespace testing.Models
         {
         }
 
+
         public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
@@ -30,6 +32,14 @@ namespace testing.Models
 
             modelBuilder.Entity<Account>()
                 .Property(e => e.Password)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Admin>()
+                .Property(e => e.UserAdmin)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Admin>()
+                .Property(e => e.PassAdmin)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Bill>()
