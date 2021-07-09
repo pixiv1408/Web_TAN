@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace testing.ViewModels
 {
-    [NotMapped]
     public class ChangesPassword
     {
-        [Required]
-        [Display(Name =("Mật khẩu cũ"))]
+        [Required(ErrorMessage = "Nhập mật khẩu cũ")]
+        [Display(Name = ("Mật khẩu cũ"))]
         public string oldPassword { get; set; }
-        [Required]
+
+        [Required(ErrorMessage ="Nhập mật khẩu mới")]
         [Display(Name = ("Mật khẩu mới"))]
         public string newPassword { get; set; }
+
+        [Required(ErrorMessage ="Nhập lại mật khẩu mới")]
+        [System.ComponentModel.DataAnnotations.Compare("newPassword", ErrorMessage = "Mật khẩu mới không trùng nhau")]
+        public string newPassword2 { get; set; }
     }
 }
