@@ -47,6 +47,23 @@ namespace testing.Controllers
                 return Redirect(strURL);
             }
         }
+        // mua ngay
+        public ActionResult MuaNgay(int IdFood)
+        {
+            List<GioHang> lstGH = listGioHang();
+            GioHang monan = lstGH.Find(x => x.FoodID == IdFood);
+            if (monan == null)
+            {
+                monan = new GioHang(IdFood);
+                lstGH.Add(monan);
+                return RedirectToAction("MuaHang", "Cart");
+            }
+            else
+            {
+                monan.DAmount++;
+                return RedirectToAction("MuaHang", "Cart");
+            }
+        }
         // tổng số lượng món
         private int TongSL()
         {

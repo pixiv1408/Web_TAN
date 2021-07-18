@@ -24,8 +24,7 @@ namespace testing.Controllers
         public ActionResult SignUP()
         {
             return View();
-        }
-       
+        }      
         [HttpPost]
         public ActionResult SignUp(DangKy model)
         {          
@@ -125,6 +124,8 @@ namespace testing.Controllers
             }
             return View();
         }
+        // thay đổi thông tin cá nhân
+      
 
         // đăng xuất
         public ActionResult logOut()

@@ -41,24 +41,37 @@
                                         <th scope="col" class="border-0">
                                             <div class="p-2 text-uppercase">Tên loại món</div>
                                         </th>
+                                        <th scope="col" class="border-0">
+                                            <div class="p-2 text-uppercase">Trạng thái</div>
+                                        </th>
+                                        <th>
+
+                                        </th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        <tr>
-                                            <td class="align-middle"><strong>@item.CateID</strong></td>
+                                    <tr>
+                                        <td class="align-middle"><strong>@item.CateID</strong></td>
+                                        <td class="align-middle">
+                                            <strong>@item.CName</strong>
+                                        </td>
+                                        <td class="align-middle">
+                                            <strong>@item.CStatus</strong>
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Sửa", "EditCate", new { id = item.CateID })
+                                        </td>
+                                        @using (Html.BeginForm("DeleteCate", "Admin", new { id = item.CateID }))
+                                        {
                                             <td class="align-middle">
-                                                <strong>@item.CName</strong>
+                                                <button type="submit" class="btn btn-danger" style="font-weight:bold"> Xóa / Khôi phục</button>
                                             </td>
-                                            @using (Html.BeginForm("DeleteCate","Admin",new {id =item.CateID }))
-                                            {
-                                                 <td class="align-middle">                                            
-                                                <button type="submit" class="btn btn-danger">Xóa</button>                                        
-                                            </td>
-                                            }
-                                        </tr>
+                                        }
+
+                                    </tr>
                                     }
                                 </tbody>
                             </table>

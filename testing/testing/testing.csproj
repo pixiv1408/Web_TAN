@@ -138,6 +138,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\FoodHomeController.cs" />
+    <Compile Include="Controllers\HistoryOrderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,9 +147,7 @@
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="ViewModels\ChangesPassword.cs" />
     <Compile Include="ViewModels\DangKy.cs" />
     <Compile Include="Models\Database.cs" />
@@ -161,25 +160,21 @@
     <Compile Include="ViewModels\GioHang.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\testing.dll" />
-    <Content Include="bin\testing.pdb" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\detail.css" />
     <Content Include="Content\flexslider.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\manager.css" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Content\style.css" />
+    <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="obj\Release\testing.csproj.CoreCompileInputs.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -211,7 +206,6 @@
     <Content Include="Views\FoodHome\CategoriesFood.cshtml" />
     <Content Include="Views\FoodHome\NewestFood.cshtml" />
     <Content Include="Views\FoodHome\FoodByCate.cshtml" />
-    <Content Include="Views\Shared\_breadcrumb.cshtml" />
     <Content Include="Views\FoodHome\Details.cshtml" />
     <Content Include="Views\Customer\SignUP.cshtml" />
     <Content Include="Views\Shared\_PartialFooter.cshtml" />
@@ -226,7 +220,16 @@
     <Content Include="Views\Admin\EditFood.cshtml" />
     <Content Include="Views\Cart\MuaHang.cshtml" />
     <Content Include="Views\Cart\ThongBaoOrder.cshtml" />
+    <Content Include="Views\Admin\LoaiMon.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Shared\_PartialHeader.cshtml" />
     <Content Include="Views\Customer\ChangesPassword.cshtml" />
+    <Content Include="Views\Shared\_PartialSlideAD.cshtml" />
+    <Content Include="Views\FoodHome\SearchFood.cshtml" />
+    <Content Include="Views\Admin\EditCate.cshtml" />
+    <Content Include="Views\Shared\_PartialProfile.cshtml" />
+    <Content Include="Views\HistoryOrder\HistoryOrder.cshtml" />
+    <Content Include="Views\HistoryOrder\DetailHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

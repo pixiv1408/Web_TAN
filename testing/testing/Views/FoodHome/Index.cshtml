@@ -16,7 +16,6 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
                     <li class="breadcrumb-item">Đặt món</li>
-                    @*<li class="breadcrumb-item " aria-current="#">Sub-category</li>*@
                 </ol>
             </nav>
         </div>
@@ -25,12 +24,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-3">
-            <!--category -->
             @Html.Action("CategoriesFood", "FoodHome")
-            <!--category -->
-            <!--món mới nhất -->
-            @Html.Action("NewestFood", "FoodHome")
-            <!--món mới nhất -->
+         
+            @Html.Action("NewestFood", "FoodHome")      
         </div>
         <!--Món -->
         <div class="col-sm-9">
@@ -45,7 +41,6 @@
                                 <h4 class="card-title show_txt" style="text-align:center">
                                     <a href="@Url.Action("Details","FoodHome",new { id = item.FoodID })" title="View Product" style="text-decoration:none">@item.FName</a>
                                 </h4>
-
                                 <!--Món detail -->
                                 <p class="card-text show_txt" style="text-align:center">
                                     @item.FDescribe

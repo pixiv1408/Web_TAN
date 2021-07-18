@@ -26,9 +26,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link  dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Xin chào: @Session["FullName"].ToString()</strong></a>
                         <ul class="dropdown-menu bg-danger" aria-labelledby="dropdownMenuLink">
-                            <li class="nav-item"><a class="nav-link" href="">Thông tin</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Thông tin</a></li>
                             <li class="nav-item"><a class="nav-link" href="@Url.Action("ChangesPassword","Customer")">Đổi mật khẩu</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Lịch sử đơn hàng</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@Url.Action("HistoryOrder","HistoryOrder")">Lịch sử đơn hàng</a></li>
                             <li role="separator" class="divider" style="color:white;border:1px solid white"></li>
                             <li class="nav-item"><a href="@Url.Action("Logout","Customer")" class="nav-link">Đăng xuất</a></li>
                         </ul>
@@ -39,9 +39,7 @@
                     <li class="nav-item"><a class="nav-link" href="@Url.Action("DangNhap","Customer")">Đăng nhập</a></li>
                     <li class="nav-item"><a class="nav-link" href="@Url.Action("SignUP","Customer")"> Đăng ký</a></li>
                 }
-            </ul>
-
-           
+            </ul>          
                 @using (Html.BeginForm("SearchFood","FoodHome"))
                 {
                     <div class="input-group input-group-sm">
@@ -52,8 +50,7 @@
                             </button>
                         </div>
                     </div>
-                }
-        
+                }       
             @Html.Action("PartialGioHang", "Cart")
         </div>
     </div>

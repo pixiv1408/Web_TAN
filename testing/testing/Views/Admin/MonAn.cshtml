@@ -1,7 +1,7 @@
 ﻿
 @using testing.Models
 @using PagedList.Mvc;
-@*@model IEnumerable<testing.Models.Food>*@
+
 @model PagedList.PagedList<testing.Models.Food>
 @{
     ViewBag.Title = "MonAn";
@@ -20,7 +20,6 @@
 }
 
 <h2>Quản lý món ăn</h2>
-
 <p>
     @Html.ActionLink("Thêm món mới", "CreateNew")
 </p>
@@ -38,9 +37,6 @@
         <th>
             <label>Mô tả</label>
         </th>
-        @*<th>
-                @Html.DisplayNameFor(model => model.FStatus)
-            </th>*@
         <th>
             <label>Giá món</label>
         </th>
@@ -57,18 +53,15 @@
                 @Html.DisplayFor(modelItem => item.FName)
             </td>
             <td>
-               @*<img src="@item.Fimage" width="100" height="100" />*@
                <img  src="@Url.Content("~/images/"+ item.Fimage)" height="100" width="100" />
             </td>
             <td>
-                @*@Html.DisplayFor(modelItem => item.FDescribe)*@
                 @Truncate(item.FDescribe,100)
             </td>
             @*<td>
                     @Html.DisplayFor(modelItem => item.FStatus)
                 </td>*@
             <td>
-                @*@Html.DisplayFor(modelItem => item.FPrice)*@
                 @string.Format("{0:0,0}", item.FPrice) VNĐ
             </td>
             <td>
@@ -78,7 +71,6 @@
             </td>
         </tr>
     }
-
 </table>
 
 

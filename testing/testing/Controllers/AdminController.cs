@@ -24,7 +24,7 @@ namespace testing.Controllers
                 return RedirectToAction("Login", "Admin");
             }
             return View();
-        }
+        }   
         //Login AdMin
         [HttpGet]
         public ActionResult Login()
@@ -55,16 +55,13 @@ namespace testing.Controllers
         public ActionResult MonAn(int ?page)
         {
             int pageNum = (page ?? 1);
-            int pageSize = 8;
-            //var listFood = db.Foods.ToList();
-            //Food ds = new Food();
-
-            return View(db.Foods.ToList().Where(a=>a.FStatus==true).OrderBy(x=>x.FoodID).ToPagedList(pageNum,pageSize));
+            int pageSize = 8;         
+            return View(db.Foods.ToList().Where(a=>a.FStatus==true && a.Category.CStatus==true).OrderBy(x=>x.FoodID).ToPagedList(pageNum,pageSize));
         }
         // show list loại món
         public ActionResult LoaiMon()
         {
-            return View(db.Categories.ToList().Where(a=>a.CStatus==true).OrderBy(x => x.CateID));
+            return View(db.Categories.ToList().OrderBy(x => x.CateID));
         }
         
         // thêm loại món
@@ -73,6 +70,7 @@ namespace testing.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult ThemLoaiMon(FormCollection form)
         {
@@ -97,7 +95,7 @@ namespace testing.Controllers
             }
             return View();
         }
-        // xóa loại món
+        // xóa và khôi phục loại món
         [HttpPost]
         public ActionResult DeleteCate(int id)
         {
@@ -107,18 +105,47 @@ namespace testing.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-            cate.CStatus = false;
+
+            if(cate.CStatus== true)
+            {
+                cate.CStatus = false;
+            }
+            else
+            {
+                cate.CStatus = true;                        
+            }
             db.Entry(cate).State = System.Data.Entity.EntityState.Modified;
-            db.SaveChanges();             
+            db.SaveChanges();
             return RedirectToAction("LoaiMon");
         }
+        // Edit loại món
+        public ActionResult EditCate(int id)
+        {
+            Category cate = new Category();
+            cate = db.Categories.SingleOrDefault(a => a.CateID == id);
+
+            return View(cate);
+        }
+        [HttpPost]
+        public ActionResult EditCate(Category cate)
+        {
+             if(cate == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            cate.CStatus = true;
+            db.Entry(cate).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("LoaiMon");
+        }
+
 
         //Thêm món
         public ActionResult CreateNew()
         {
             Food mon = new Food();
-            mon.listCategory = db.Categories.ToList();
-
+            mon.listCategory = db.Categories.Where(a=>a.CStatus==true).ToList();  
             return View(mon);
         }
         [HttpPost]
@@ -126,7 +153,7 @@ namespace testing.Controllers
         {
             if(fileupload == null)
             {
-                ViewBag.ThongBao = "Chọn ảnh món ăn";
+                ViewBag.ThongBaoHinh = "Chọn ảnh món ăn";
                 return View();
             }
             else
@@ -151,7 +178,6 @@ namespace testing.Controllers
                     db.SaveChanges();
                 }
             }
-
             return RedirectToAction("MonAn");
         }
         // chi tiết món
@@ -200,7 +226,7 @@ namespace testing.Controllers
         {
             Food monan = new Food();
             monan = db.Foods.SingleOrDefault(a => a.FoodID == id);
-            monan.listCategory = db.Categories.ToList();
+            monan.listCategory = db.Categories.Where(a=>a.CStatus==true).ToList();
             if (monan == null)
             {
                 Response.StatusCode = 404;

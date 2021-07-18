@@ -1,0 +1,99 @@
+﻿@model IEnumerable<testing.Models.Detail>
+
+@{
+    ViewBag.Title = "Chi tiết lịch sử";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
+                    <li class="breadcrumb-item">Chi tiết đơn hàng</li>
+
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-3">
+            @Html.Partial("_PartialProfile", "Customer")
+        </div>
+        <div class="table-responsive col-md-9">
+            <h5>Chi tiết đơn hàng</h5>
+
+            <hr />
+            <table class="table table-bordered">
+                <thead class="bg-danger">
+                    <tr style="color:white">
+                        <th>
+                            Tên món
+                        </th>
+                        <th>
+                            Số lượng
+                        </th>
+
+                        <th>
+                            Giá món
+                        </th>
+                        <th>
+                            Tổng giá món
+                        </th>
+                        <th>
+                            Hình ảnh
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {                   
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DFName)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DAmount)
+                        </td>
+
+                        <td>
+                            @string.Format("{0:0,0}", item.DfPrice) VNĐ
+                        </td>
+                        <td>
+                            @string.Format("{0:0,0}", item.DfPrice*item.DAmount) VNĐ
+                        </td>
+                        <td>
+                            <img src="~/images/@item.DFimg" width="100" height="100" />
+                        </td>
+                    </tr>
+                }
+            </table>
+
+            <div style="float:right;padding-bottom:50px">               
+                <a href="@Url.Action("HistoryOrder","HistoryOrder")" class="btn  btn-danger">Quay về lịch sử đơn hàng</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

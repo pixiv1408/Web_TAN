@@ -15,7 +15,6 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
                     <li class="breadcrumb-item">Chi tiết món</li>
-                    @*<li class="breadcrumb-item " aria-current="#">Sub-category</li>*@
                 </ol>
             </nav>
         </div>
@@ -35,6 +34,7 @@
         </div>
         <!--Detail -->
         <div class="col-sm-9">
+
             <div class="container">
                 <div class="card">
                     <div class="row">
@@ -88,7 +88,7 @@
                                     </div> <!-- row.// -->*@
                                 <hr>
 
-                                <a href="@Url.Action("MuaHang","Cart")" class="btn btn-lg btn-warning text-uppercase" style="font-weight:bold">Mua ngay</a>
+                                <a href="@Url.Action("MuaNgay","Cart",new {@IdFood=Model.FoodID })" class="btn btn-lg btn-warning text-uppercase" style="font-weight:bold">Mua ngay</a>
                                 <a href="@Url.Action("addCart","Cart",new {@IdFood=Model.FoodID,@strURL=Request.Url.ToString() })" class="btn btn-lg  btn-outline-danger text-uppercase"> <i class="fas fa-shopping-cart"></i>Thêm vào giỏ </a>
 
                             </article> <!-- card-body.// -->

@@ -14,7 +14,6 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
                 <li class="breadcrumb-item">Đăng ký</li>
-                @*<li class="breadcrumb-item " aria-current="#">Sub-category</li>*@
             </ol>
         </nav>
     </div>
@@ -29,20 +28,15 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-
-                <!--category -->
                 @Html.Action("CategoriesFood", "FoodHome")
-                <!--category -->
-                <!--món mới nhất -->
                 @Html.Action("NewestFood", "FoodHome")
-                <!--món mới nhất -->
             </div>
 
             <div class="col-md-9">
 
                 <div class="row">
 
-                    <form action="#" style="border:1px solid #ccc">
+                    @*<div style="border:1px solid #ccc">*@
                         <div class="container">
                             <h4 style="text-align:center"><b>Đăng ký</b></h4>
                             <hr>
@@ -126,7 +120,7 @@
                             </div>
 
                         </div>
-                    </form>
+                    @*</div>*@
 
                 </div>
             </div>

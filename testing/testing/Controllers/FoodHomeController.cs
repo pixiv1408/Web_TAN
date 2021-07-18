@@ -12,13 +12,14 @@ namespace testing.Controllers
         public ActionResult Index()
         {
             var listFood = db.Foods.ToList();
-            return View(listFood.Where(x=>x.FStatus==true));
+            return View(listFood.OrderBy(a=>a.CID).Where(x=>x.FStatus==true && x.Category.CStatus==true));
         }
         // lấy loại món
         public ActionResult CategoriesFood()
-        {
-            var listCategories = db.Categories.ToList();
-            return PartialView(listCategories.Where(x=>x.CStatus==true));
+        {           
+            //var listCategories = db.Categories.ToList();
+            var cate = (from p in db.Categories join a in db.Foods on p.CateID equals a.CID where p.CStatus == true select p).Distinct();
+            return PartialView(cate);
         }
         // lấy món mới nhất
         public ActionResult NewestFood()
@@ -51,8 +52,6 @@ namespace testing.Controllers
                 search = search.Where(s => s.FName.Contains(searchStr.ToLower()));
             }
             return View(search);
-        }
-
-     
+        }    
     }
 }
