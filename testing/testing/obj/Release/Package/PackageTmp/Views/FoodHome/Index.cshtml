@@ -1,31 +1,48 @@
-﻿@model IEnumerable<testing.Models.Food>
-@using testing.Models;
+﻿@*@model IEnumerable<testing.Models.Food>*@
+
+@using testing.Models
+@using PagedList.Mvc;
+
+@model PagedList.PagedList<testing.Models.Food>
 
 @{
     /**/
 
-    ViewBag.Title = "Gà Rán Việt Nam";
+    ViewBag.Title = "Trang chủ";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length) <text>...</text>
+    }
+}
 
-
-
-@Html.Partial("_breadcrumb")
+@Html.Partial("_PartialSlideAD")
 <div class="container">
     <div class="row">
-
-        
-        <div class="col-sm-3">
-
-            <!--category -->
-            @Html.Action("CategoriesFood", "FoodHome")
-            <!--category -->
-
-            <!--món mới nhất -->
-            @Html.Action("NewestFood", "FoodHome")
-            <!--món mới nhất -->
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
+                    <li class="breadcrumb-item">Đặt món</li>
+                </ol>
+            </nav>
         </div>
-       
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.Action("CategoriesFood", "FoodHome")
+
+            @Html.Action("NewestFood", "FoodHome")
+        </div>
         <!--Món -->
         <div class="col-sm-9">
             <div class="row">
@@ -36,12 +53,11 @@
                             <img class="card-img-top" src="~/images/@item.Fimage" width="150" height="200" alt="Card image cap">
                             <div class="card-body">
                                 <!--Món detail -->
-                                <h4 class="card-title show_txt">
-                                    <a href="@Url.Action("Details","FoodHome",new { id = item.FoodID })" title="View Product">@item.FName</a>
+                                <h4 class="card-title show_txt" style="text-align:center">
+                                    <a href="@Url.Action("Details","FoodHome",new { id = item.FoodID })" title="View Product" style="text-decoration:none">@item.FName</a>
                                 </h4>
-                                
                                 <!--Món detail -->
-                                <p class="card-text show_txt">
+                                <p class="card-text show_txt" style="text-align:center">
                                     @item.FDescribe
                                 </p>
                                 <div class="row">
@@ -58,10 +74,14 @@
                     </div>
                 }
             </div>
+            <hr />
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+            <div class="MenuTrang">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+            </div>
+
         </div>
         <!--Món -->
-
     </div>
 </div>
-
 

@@ -1,27 +1,34 @@
 ﻿@model IEnumerable<testing.Models.Food>
-
+@using testing.Models
 @{
-    ViewBag.Title = "FoodByCate";
+    ViewBag.Title = "Món theo loại";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-
-@Html.Partial("_breadcrumb")
-
+@Html.Partial("_PartialSlideAD")
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
+                    <li class="breadcrumb-item">Món / Món theo loại </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
 
-        <!--category -->
+
         <div class="col-sm-3">
-
             @Html.Action("CategoriesFood", "FoodHome")
-
-            <!--món mới nhất -->
+        
             @Html.Action("NewestFood", "FoodHome")
-            <!--món mới nhất -->
+         
         </div>
-        <!--category -->
         <!--Món -->
         <div class="col-sm-9">
             <div class="row">
@@ -42,11 +49,11 @@
                                 <div class="row">
                                     <div class="col">
 
-                                        <p class="btn btn-danger btn-block"><b>@string.Format("{0:0,0}", item.FPrice) VNĐ</b></p>
+                                        <p class="btn btn-danger btn-block bg-light"><b style="color:black">@string.Format("{0:0,0}", item.FPrice) VNĐ</b></p>
 
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-success btn-block">Đặt món</a>
+                                        <a href="@Url.Action("addCart","Cart",new {@IdFood=item.FoodID,@strURL=Request.Url.ToString() })" class="btn btn-success btn-block bg-danger">Đặt món</a>
                                     </div>
 
                                 </div>

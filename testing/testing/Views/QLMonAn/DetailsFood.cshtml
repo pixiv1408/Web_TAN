@@ -1,0 +1,70 @@
+﻿@model testing.Models.Food
+
+@{
+    ViewBag.Title = "DetailsFood";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết món</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model=>model.FoodID)
+        <dt>
+            Loại món
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CName)
+        </dd>
+
+        <dt>
+           Tên món
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FName)
+        </dd>
+
+        <dt>
+            Hình ảnh
+        </dt>
+
+        <dd>
+            @*<img src="@Url.Content("~/images"+Model.Fimage)" width="250" height="250" />*@
+            @*<input type="file" name="fileupload" />*@
+            <img src="@Url.Content("~/images/"+Model.Fimage)" width="250" height="250" />
+
+        </dd>
+
+        <dt>
+             Mô tả món
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FDescribe)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.FStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FStatus)
+        </dd>*@
+
+        <dt>
+            Giá món
+        </dt>
+
+        <dd>
+            @string.Format("{0:0,0}",Model.FPrice) VNĐ
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Cập nhập", "EditFood", new { id = Model.FoodID }) |
+    @Html.ActionLink("Về quản lý món", "MonAn")
+</p>

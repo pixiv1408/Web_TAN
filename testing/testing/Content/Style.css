@@ -136,3 +136,9 @@ footer {
     .login-form h2 {
         margin: 0 0 15px;
     }
+
+
+
+.MenuTrang li {
+    display: inline;
+}

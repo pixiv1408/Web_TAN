@@ -1,36 +1,49 @@
 ﻿@model testing.Models.Food
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết món";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-@Html.Partial("_breadcrumb")
+
+
+
+@Html.Partial("_PartialSlideAD")
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">@Html.ActionLink("Trang chủ", "Index", "FoodHome")</li>
+                    <li class="breadcrumb-item">Chi tiết món</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
 
-        <!--category -->
         <div class="col-sm-3">
 
             @Html.Action("CategoriesFood", "FoodHome")
 
-            <!--món mới nhất -->
-            @Html.Action("NewestFood", "FoodHome")
-            <!--món mới nhất -->
-        </div>
-        <!--category -->
 
+            @Html.Action("NewestFood", "FoodHome")
+
+        </div>
         <!--Detail -->
         <div class="col-sm-9">
+
             <div class="container">
                 <div class="card">
                     <div class="row">
 
                         <aside class="col-sm-5 border-right">
                             <article class="gallery-wrap">
-                                <div class="img-big-wrap" >
-                                    <img src="~/images/@Model.Fimage" >
-                                </div> <!-- slider-product.// -->                             
+                                <div class="img-big-wrap">
+                                    <img src="~/images/@Model.Fimage">
+                                </div> <!-- slider-product.// -->
                             </article> <!-- gallery-wrap .end// -->
                         </aside>
 
@@ -40,43 +53,43 @@
 
                                 <p class="price-detail-wrap">
                                     <span class="price h3 text-warning">
-                                        <span class="num"><b>@string.Format("{0:0,0}",Model.FPrice)</b></span> <span class="currency">VNĐ</span>
+                                        <span class="num"><b>@string.Format("{0:0,0}", Model.FPrice)</b></span> <span class="currency">VNĐ</span>
                                     </span>
                                 </p> <!-- price-detail-wrap .// -->
                                 <dl class="item-property">
                                     <dt>Chi tiết món</dt>
                                     <dd>
                                         <p>
-                                           @Model.FDescribe
+                                            @Model.FDescribe
 
                                         </p>
                                     </dd>
                                 </dl>
 
                                 @*<hr>
-                                <div class="row">
-                                    <div class="col-sm-5">
+                                    <div class="row">
+                                        <div class="col-sm-5">
 
-                                        <dl class="param param-inline">
-                                            <dt>Số lượng: </dt>
-                                            <dd>
-                                                <select class="form-control form-control-sm" style="width:70px;">
-                                                    <option> 1 </option>
-                                                    <option> 2 </option>
-                                                    <option> 3 </option>
-                                                    <option> 4 </option>
-                                                    <option> 5 </option>
-                                                </select>
-                                            </dd>
-                                        </dl>  <!-- item-property .// -->
+                                            <dl class="param param-inline">
+                                                <dt>Số lượng: </dt>
+                                                <dd>
+                                                    <select class="form-control form-control-sm" style="width:70px;">
+                                                        <option> 1 </option>
+                                                        <option> 2 </option>
+                                                        <option> 3 </option>
+                                                        <option> 4 </option>
+                                                        <option> 5 </option>
+                                                    </select>
+                                                </dd>
+                                            </dl>  <!-- item-property .// -->
 
-                                    </div> <!-- col.// -->
+                                        </div> <!-- col.// -->
 
-                                </div> <!-- row.// -->*@
+                                    </div> <!-- row.// -->*@
                                 <hr>
 
-                                <a href="#" class="btn btn-lg btn-primary text-uppercase">Mua ngay</a>
-                                <a href="@Url.Action("addCart","Cart",new {@IdFood=Model.FoodID,@strURL=Request.Url.ToString() })" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i>Thêm vào giỏ </a>
+                                <a href="@Url.Action("MuaNgay","Cart",new {@IdFood=Model.FoodID })" class="btn btn-lg btn-warning text-uppercase" style="font-weight:bold">Mua ngay</a>
+                                <a href="@Url.Action("addCart","Cart",new {@IdFood=Model.FoodID,@strURL=Request.Url.ToString() })" class="btn btn-lg  btn-outline-danger text-uppercase"> <i class="fas fa-shopping-cart"></i>Thêm vào giỏ </a>
 
                             </article> <!-- card-body.// -->
                         </aside> <!-- col.// -->

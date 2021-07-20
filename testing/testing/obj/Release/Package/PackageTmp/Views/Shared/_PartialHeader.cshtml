@@ -1,0 +1,63 @@
+﻿<nav class="navbar navbar-expand-md navbar-dark bg-danger navbar-fixed-top" style="font-weight:bold">
+    <div class="container">
+
+        @*<a class="navbar-brand" href="@Url.Action("Index","FoodHome")"><img src="~/images/logo3.png" class="small" /></a>*@
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav m-auto dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index","FoodHome")">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Giới thiệu</a>
+                </li>
+                @if (Session["LogIn"] != null)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Xin chào: @Session["FullName"].ToString()</strong></a>
+                        <ul class="dropdown-menu bg-danger" aria-labelledby="dropdownMenuLink">
+                            <li class="nav-item"><a class="nav-link" href="@Url.Action("profile","Profile")">Thông tin</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@Url.Action("ChangesPassword","Customer")">Đổi mật khẩu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@Url.Action("HistoryOrder","HistoryOrder")">Lịch sử đơn hàng</a></li>
+                            <li role="separator" class="divider" style="color:white;border:1px solid white"></li>
+                            <li class="nav-item"><a href="@Url.Action("Logout","Customer")" class="nav-link">Đăng xuất</a></li>
+                        </ul>
+                    </li>                
+                }
+                else
+                {
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("DangNhap","Customer")">Đăng nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("SignUP","Customer")"> Đăng ký</a></li>
+                }
+            </ul>          
+                @using (Html.BeginForm("SearchFood","FoodHome"))
+                {
+                    <div class="input-group input-group-sm">
+                        <input name="searchStr" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Tên món cần tìm...">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary btn-number">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                }       
+
+            @Html.Action("PartialGioHang", "Cart")
+        </div>
+    </div>
+</nav>
+
+<section>
+    <div class="container" style="padding-top:30px">       
+    </div>
+</section>

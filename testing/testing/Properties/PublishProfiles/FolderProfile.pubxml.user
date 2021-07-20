@@ -196,10 +196,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/testing.dll">
-      <publishTime>07/07/2021 20:51:56</publishTime>
+      <publishTime>07/20/2021 19:37:17</publishTime>
     </File>
     <File Include="bin/testing.pdb">
-      <publishTime>07/07/2021 20:51:56</publishTime>
+      <publishTime>07/20/2021 19:37:17</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -235,7 +235,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/01/2021 09:25:12</publishTime>
     </File>
     <File Include="Content/login.css">
-      <publishTime>07/01/2021 09:25:12</publishTime>
+      <publishTime>07/09/2021 19:19:14</publishTime>
     </File>
     <File Include="Content/manager.css">
       <publishTime>07/01/2021 09:25:12</publishTime>
@@ -247,7 +247,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/01/2021 09:25:12</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>07/01/2021 09:25:12</publishTime>
+      <publishTime>07/20/2021 17:37:56</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>06/26/2021 13:38:44</publishTime>
@@ -328,46 +328,58 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/07/2021 17:04:48</publishTime>
     </File>
     <File Include="Views/Admin/IndexAD.cshtml">
-      <publishTime>07/05/2021 16:07:12</publishTime>
+      <publishTime>07/09/2021 14:50:46</publishTime>
+    </File>
+    <File Include="Views/Admin/Login.cshtml">
+      <publishTime>07/09/2021 14:39:00</publishTime>
     </File>
     <File Include="Views/Admin/MonAn.cshtml">
       <publishTime>07/05/2021 19:31:04</publishTime>
     </File>
     <File Include="Views/Cart/GioHang.cshtml">
-      <publishTime>07/07/2021 16:10:24</publishTime>
+      <publishTime>07/16/2021 00:05:28</publishTime>
     </File>
     <File Include="Views/Cart/MuaHang.cshtml">
-      <publishTime>07/07/2021 16:27:18</publishTime>
+      <publishTime>07/20/2021 16:50:08</publishTime>
     </File>
     <File Include="Views/Cart/PartialGioHang.cshtml">
-      <publishTime>07/05/2021 14:07:00</publishTime>
+      <publishTime>07/08/2021 00:22:44</publishTime>
     </File>
     <File Include="Views/Cart/ThongBaoOrder.cshtml">
-      <publishTime>07/07/2021 17:14:22</publishTime>
+      <publishTime>07/15/2021 23:08:28</publishTime>
     </File>
     <File Include="Views/Customer/ChangesPassword.cshtml">
-      <publishTime>07/07/2021 18:53:44</publishTime>
+      <publishTime>07/20/2021 16:54:38</publishTime>
     </File>
     <File Include="Views/Customer/DangNhap.cshtml">
-      <publishTime>07/05/2021 17:18:18</publishTime>
+      <publishTime>07/15/2021 22:46:58</publishTime>
     </File>
     <File Include="Views/Customer/SignUP.cshtml">
-      <publishTime>07/05/2021 14:30:40</publishTime>
+      <publishTime>07/15/2021 09:52:56</publishTime>
     </File>
     <File Include="Views/FoodHome/CategoriesFood.cshtml">
-      <publishTime>07/07/2021 17:46:12</publishTime>
+      <publishTime>07/10/2021 10:18:28</publishTime>
     </File>
     <File Include="Views/FoodHome/Details.cshtml">
-      <publishTime>07/05/2021 20:12:02</publishTime>
+      <publishTime>07/15/2021 21:56:50</publishTime>
     </File>
     <File Include="Views/FoodHome/FoodByCate.cshtml">
-      <publishTime>07/06/2021 23:02:12</publishTime>
+      <publishTime>07/10/2021 11:21:04</publishTime>
     </File>
     <File Include="Views/FoodHome/Index.cshtml">
-      <publishTime>07/07/2021 20:19:48</publishTime>
+      <publishTime>07/20/2021 17:35:14</publishTime>
     </File>
     <File Include="Views/FoodHome/NewestFood.cshtml">
-      <publishTime>07/07/2021 17:54:00</publishTime>
+      <publishTime>07/09/2021 15:32:32</publishTime>
+    </File>
+    <File Include="Views/FoodHome/SearchFood.cshtml">
+      <publishTime>07/09/2021 20:18:52</publishTime>
+    </File>
+    <File Include="Views/HistoryOrder/DetailHistory.cshtml">
+      <publishTime>07/19/2021 23:05:10</publishTime>
+    </File>
+    <File Include="Views/HistoryOrder/HistoryOrder.cshtml">
+      <publishTime>07/19/2021 23:34:06</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>06/26/2021 13:38:44</publishTime>
@@ -378,6 +390,30 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Home/Index.cshtml">
       <publishTime>06/26/2021 13:38:44</publishTime>
     </File>
+    <File Include="Views/Profile/profile.cshtml">
+      <publishTime>07/20/2021 17:51:48</publishTime>
+    </File>
+    <File Include="Views/QLCateFood/EditCate.cshtml">
+      <publishTime>07/15/2021 11:17:42</publishTime>
+    </File>
+    <File Include="Views/QLCateFood/LoaiMon.cshtml">
+      <publishTime>07/19/2021 22:31:10</publishTime>
+    </File>
+    <File Include="Views/QLMonAn/CreateNew.cshtml">
+      <publishTime>07/19/2021 22:37:24</publishTime>
+    </File>
+    <File Include="Views/QLMonAn/DeleteF.cshtml">
+      <publishTime>07/05/2021 19:14:46</publishTime>
+    </File>
+    <File Include="Views/QLMonAn/DetailsFood.cshtml">
+      <publishTime>07/09/2021 14:52:46</publishTime>
+    </File>
+    <File Include="Views/QLMonAn/EditFood.cshtml">
+      <publishTime>07/19/2021 22:36:58</publishTime>
+    </File>
+    <File Include="Views/QLMonAn/MonAn.cshtml">
+      <publishTime>07/20/2021 17:34:56</publishTime>
+    </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>06/26/2021 13:38:44</publishTime>
     </File>
@@ -385,13 +421,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/07/2021 17:51:08</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>07/06/2021 23:44:52</publishTime>
+      <publishTime>07/19/2021 23:32:24</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutUser.cshtml">
-      <publishTime>07/07/2021 20:29:15</publishTime>
+      <publishTime>07/20/2021 17:39:32</publishTime>
     </File>
     <File Include="Views/Shared/_PartialFooter.cshtml">
-      <publishTime>07/07/2021 17:42:36</publishTime>
+      <publishTime>07/15/2021 23:35:38</publishTime>
+    </File>
+    <File Include="Views/Shared/_PartialHeader.cshtml">
+      <publishTime>07/20/2021 16:27:12</publishTime>
+    </File>
+    <File Include="Views/Shared/_PartialProfile.cshtml">
+      <publishTime>07/20/2021 16:42:56</publishTime>
+    </File>
+    <File Include="Views/Shared/_PartialSlideAD.cshtml">
+      <publishTime>07/09/2021 19:28:26</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>06/26/2021 13:38:44</publishTime>
@@ -400,7 +445,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/26/2021 13:38:44</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/07/2021 20:51:56</publishTime>
+      <publishTime>07/20/2021 19:37:17</publishTime>
     </File>
   </ItemGroup>
 </Project>

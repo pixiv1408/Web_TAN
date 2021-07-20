@@ -81,7 +81,6 @@ D:\testing\testing\bin\PagedList.dll
 D:\testing\testing\bin\PagedList.Mvc.dll
 D:\testing\testing\bin\PagedList.xml
 D:\testing\testing\bin\PagedList.Mvc.xml
-D:\testing\testing\obj\Debug\testing.csprojAssemblyReference.cache
 E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\testing.dll.config
 E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\testing.dll
 E:\A tài liệu học tập\Đồ án web C#\testing\testing\bin\testing.pdb

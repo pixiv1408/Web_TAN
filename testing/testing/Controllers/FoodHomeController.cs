@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using testing.Models;
-
+using PagedList;
+using PagedList.Mvc;
 namespace testing.Controllers
 {
     public class FoodHomeController : Controller
@@ -9,10 +10,11 @@ namespace testing.Controllers
         // GET: FoodHome
         Database db = new Database();
         // lấy food
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var listFood = db.Foods.ToList();
-            return View(listFood.OrderBy(a=>a.CID).Where(x=>x.FStatus==true && x.Category.CStatus==true));
+            int pageNum = (page ?? 1);
+            int pageSize = 9;        
+            return View(db.Foods.ToList().Where(x => x.FStatus == true && x.Category.CStatus == true).OrderBy(a => a.CID).ToPagedList(pageNum, pageSize));
         }
         // lấy loại món
         public ActionResult CategoriesFood()

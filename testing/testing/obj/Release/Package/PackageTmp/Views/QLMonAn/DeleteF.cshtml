@@ -1,0 +1,76 @@
+﻿@model testing.Models.Food
+
+@{
+    ViewBag.Title = "DeleteF";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Xác nhận tạm thời xóa?</h3>
+@Html.ActionLink("Quay về quản lý món", "MonAn")
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.FoodID)
+        <dt>
+            Loại món
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CName)
+        </dd>
+
+        <dt>
+            Tên món
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FName)
+        </dd>
+
+        <dt>
+            Hình ảnh
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+Model.Fimage)" width="250" height="250" />
+
+        </dd>
+
+        <dt>
+            Mô tả món
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FDescribe)
+        </dd>
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.FStatus)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FStatus)
+            </dd>*@
+
+        <dt>
+            Giá món
+        </dt>
+
+        <dd>
+            @string.Format("{0:0,0}", Model.FPrice) VNĐ
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+
+            <input type="submit" value="Xóa món" class="btn btn-warning" />
+
+        </div>
+    }
+</div>

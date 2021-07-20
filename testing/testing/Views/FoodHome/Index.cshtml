@@ -1,11 +1,26 @@
-﻿@model IEnumerable<testing.Models.Food>
-@using testing.Models;
+﻿@*@model IEnumerable<testing.Models.Food>*@
+
+@using testing.Models
+@using PagedList.Mvc;
+
+@model PagedList.PagedList<testing.Models.Food>
 
 @{
     /**/
 
     ViewBag.Title = "Trang chủ";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length) <text>...</text>
+    }
 }
 
 @Html.Partial("_PartialSlideAD")
@@ -25,8 +40,8 @@
     <div class="row">
         <div class="col-sm-3">
             @Html.Action("CategoriesFood", "FoodHome")
-         
-            @Html.Action("NewestFood", "FoodHome")      
+
+            @Html.Action("NewestFood", "FoodHome")
         </div>
         <!--Món -->
         <div class="col-sm-9">
@@ -59,9 +74,14 @@
                     </div>
                 }
             </div>
+            <hr />
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+            <div class="MenuTrang">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+            </div>
+
         </div>
         <!--Món -->
     </div>
 </div>
-
 

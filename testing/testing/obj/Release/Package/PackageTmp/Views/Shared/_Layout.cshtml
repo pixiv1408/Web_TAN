@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-   
+ 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
@@ -15,7 +16,6 @@
 </head>
 
 <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -30,8 +30,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Trang khách", "Index", "FoodHome")</li>
-                    <li>@Html.ActionLink("Quản lý món", "MonAn", "Admin")</li>
-                    <li>@Html.ActionLink("Quản lý loại món", "QLCate", "Admin")</li>
+                    <li>@Html.ActionLink("Quản lý món", "MonAn", "QLMonAn")</li>
+                    <li>@Html.ActionLink("Quản lý loại món", "LoaiMon", "QLCateFood")</li>
+                    @*<li>@Html.ActionLink("Quản lý tài khoản","AccMane","Admin")</li>*@
                 </ul>
             </div>
 

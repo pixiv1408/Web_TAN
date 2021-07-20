@@ -86,6 +86,7 @@ namespace testing.Controllers
                 {
                     Session["LogIn"] = acc;                
                     Session["FullName"] = acc.Customer.Fullname.ToString();
+                    Session["KH"] = acc.Customer;
                     return RedirectToAction("Index", "FoodHome");
                 }
                 else

@@ -140,6 +140,9 @@
     <Compile Include="Controllers\FoodHomeController.cs" />
     <Compile Include="Controllers\HistoryOrderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\QLCateFoodController.cs" />
+    <Compile Include="Controllers\QLMonAnController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,23 +216,24 @@
     <Content Include="Views\Cart\PartialGioHang.cshtml" />
     <Content Include="Views\Customer\DangNhap.cshtml" />
     <Content Include="Views\Admin\IndexAD.cshtml" />
-    <Content Include="Views\Admin\MonAn.cshtml" />
-    <Content Include="Views\Admin\CreateNew.cshtml" />
-    <Content Include="Views\Admin\DetailsFood.cshtml" />
-    <Content Include="Views\Admin\DeleteF.cshtml" />
-    <Content Include="Views\Admin\EditFood.cshtml" />
+    <Content Include="Views\QLMonAn\MonAn.cshtml" />
+    <Content Include="Views\QLMonAn\CreateNew.cshtml" />
+    <Content Include="Views\QLMonAn\DetailsFood.cshtml" />
+    <Content Include="Views\QLMonAn\DeleteF.cshtml" />
+    <Content Include="Views\QLMonAn\EditFood.cshtml" />
     <Content Include="Views\Cart\MuaHang.cshtml" />
     <Content Include="Views\Cart\ThongBaoOrder.cshtml" />
-    <Content Include="Views\Admin\LoaiMon.cshtml" />
+    <Content Include="Views\QLCateFood\LoaiMon.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Shared\_PartialHeader.cshtml" />
     <Content Include="Views\Customer\ChangesPassword.cshtml" />
     <Content Include="Views\Shared\_PartialSlideAD.cshtml" />
     <Content Include="Views\FoodHome\SearchFood.cshtml" />
-    <Content Include="Views\Admin\EditCate.cshtml" />
+    <Content Include="Views\QLCateFood\EditCate.cshtml" />
     <Content Include="Views\Shared\_PartialProfile.cshtml" />
     <Content Include="Views\HistoryOrder\HistoryOrder.cshtml" />
     <Content Include="Views\HistoryOrder\DetailHistory.cshtml" />
+    <Content Include="Views\Profile\profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

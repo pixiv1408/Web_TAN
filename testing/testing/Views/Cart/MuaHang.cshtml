@@ -8,7 +8,7 @@
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-@Html.ActionLink("Trở về giỏ hàng", "GioHang", "Cart")
+@*@Html.ActionLink("Trở về giỏ hàng", "GioHang", "Cart")*@
 <div class="shopping-cart">
     <div class="px-4 px-lg-0">
 
@@ -16,7 +16,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
-
                         <!-- Shopping cart table -->
                         <div class="table-responsive">
                             <table class="table">
@@ -57,7 +56,7 @@
                                                 </div>
                                             </th>
                                             @*@using (Html.BeginForm("UpdateCart", "Cart", new { @idFood = item.FoodID }))
-                                    {*@
+                                                {*@
                                             @*Giá món*@
                                             <td class="align-middle"><strong>@string.Format("{0:0,0}", item.FPrice) VNĐ</strong></td>
 
@@ -66,7 +65,7 @@
                                                 <strong>@item.DAmount</strong>
                                             </td>
                                             @*// Tổng giá tiền*@
-                                            <td class="align-middle"><strong>@string.Format("{0:0,0}", item.DAmount * item.FPrice) VNĐ</strong></td>                                
+                                            <td class="align-middle"><strong>@string.Format("{0:0,0}", item.DAmount * item.FPrice) VNĐ</strong></td>
                                         </tr>
                                     }
                                 </tbody>
@@ -78,6 +77,7 @@
                 </div>
                 @{
                     Account acc = (Account)Session["LogIn"];
+                    Customer kh = Session["KH"] as Customer;
                 }
                 @using (Html.BeginForm())
                 {
@@ -87,23 +87,26 @@
                             <div class="p-3">
                                 <div class="input-group mb-4 border rounded-pill p-2" style="align-items:center">
                                     <label class="form-control border-0 ">Tên Khách hàng:</label>
-                                    <label class="form-control border-0"><b>@acc.Customer.Fullname</b></label>
+                                    @*<label class="form-control border-0"><b>@acc.Customer.Fullname</b></label>*@
+                                    <label class="form-control border-0"><b>@kh.Fullname</b></label>
                                     @*<input type="text" placeholder="Nhập Voucher" aria-describedby="button-addon3" class="form-control border-0" value="@acc.Customer.Fullname">*@
                                 </div>
                                 <div class="input-group mb-4 border rounded-pill p-2" style="align-items:center">
                                     <label class="form-control border-0 ">Địa chỉ:</label>
-                                    <label class="form-control border-0"><b>@acc.Customer.Address</b></label>
+                                    @*<label class="form-control border-0"><b>@acc.Customer.Address</b></label>*@
+                                    <label class="form-control border-0"><b>@kh.Address</b></label>
                                 </div>
                                 <div class="input-group mb-4 border rounded-pill p-2" style="align-items:center">
                                     <label class="form-control border-0 ">Số điện thoại:</label>
-                                    <label class="form-control border-0"><b>@acc.Customer.Phone</b></label>
+                                    @*<label class="form-control border-0"><b>@acc.Customer.Phone</b></label>*@
+                                    <label class="form-control border-0"><b>@kh.Phone</b></label>
                                 </div>
                                 <div class="input-group mb-4 border rounded-pill p-2" style="align-items:center">
                                     <label class="form-control border-0 ">Ngày đặt:</label>
                                     <label class="form-control border-0"><b>@DateTime.Now.ToShortDateString()</b></label>
                                 </div>
                                 <div class="input-group mb-4 border rounded-pill p-2" style="align-items:center">
-                                    <label class="form-control border-0">Note:</label>            
+                                    <label class="form-control border-0">Note:</label>
                                     <textarea name="textNote" id="textNote" rows="5" cols="50" class="border-0 input-group">
                                     </textarea>
                                 </div>
